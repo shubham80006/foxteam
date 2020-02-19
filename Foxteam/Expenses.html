@@ -31,6 +31,15 @@
   <!-- Google Font -->
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <style>
+      table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th, td {
+        padding: 15px;
+      }
+      </style>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -343,18 +352,86 @@
         <!-- Tabs within a box -->
         <ul class="nav nav-tabs pull-left">
           <li class="active"><a href="#revenue-chart" data-toggle="tab">IN Progress</a></li>
-          <li><a href="#sales-chart" data-toggle="tab">Approval</a></li>
-          <li><a href="#sales-chart" data-toggle="tab">Document Pending</a></li>
-          <li><a href="#sales-chart" data-toggle="tab">Rejected</a></li>
-          <li><a href="#sales-chart" data-toggle="tab">Paid</a></li>
+          
+          <li><a href="#Approval" data-toggle="tab">Approval</a></li>
+          <li><a href="#Document-pending" data-toggle="tab">Document Pending</a></li>
+          <li><a href="#Rejected" data-toggle="tab">Rejected</a></li>
+          <li><a href="#paid" data-toggle="tab">Paid</a></li>
           <!--<li class="pull-right header"><i class="fa fa-inbox"></i> Expenses Status</li>-->
         </ul>
         <div class="tab-content no-padding">
           <!-- Morris chart - Sales -->
-          <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 400px;"></div>
-          <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 400px;"></div>
+          <div class="chart tab-pane active" id="revenue-chart" style="position: relative; height: 400px;">
+            <table style="width:100%">
+              <tr>
+                <th>Tokan No </th>
+                <th>Date</th>
+                <th>Project</th>
+                <th>Amount</th>
+                <th>Manager Status</th>
+                <th>Finalical Manager</th>
+                <th>Status</th>
+              </tr>
+            </table>
+          </div>
+          <div class="chart tab-pane" id="Approval" style="position: relative; height: 400px;">
+            <table style="width:100%">
+              <tr>
+                <th>Tokan No </th>
+                <th>Date</th>
+                <th>Project</th>
+                <th>Amount</th>   
+                <th>Finalical Manager</th>
+                <th>Approval Amount</th>
+                <th>Remark</th>
+               
+               
+              </tr>
+            </table>
+          </div>
+          <div class="chart tab-pane" id="Document-pending" style="position: relative; height: 400px;">
+            <table style="width:100%">
+              <tr>
+                <th>Tokan No </th>
+                <th>Date</th>
+                <th>Project</th>
+                <th>Approval Amount</th>
+                <th>Manager Status</th>
+                <th>Finalical Manager</th>
+                <th>Remark</th>
+              </tr>
+            </table>
+          </div>
+          <div class="chart tab-pane" id="Rejected" style="position: relative; height: 400px;">
+            <table style="width:100%">
+              <tr>
+                <th>Tokan No </th>
+                <th>Date</th>
+                <th>Project</th>
+                <th>Amount</th>
+                <th>Manager Status</th>
+                <th>Finalical Manager</th>
+                <th>Remark</th>
+              </tr>
+            </table>
+          </div>
+          <div class="chart tab-pane" id="Paid" style="position: relative; height: 400px;">
+            <table style="width:100%">
+              <tr>
+                <th>Tokan No </th>
+                <th>Date</th>
+                <th>Project</th>
+                <th>Amount</th>
+                <th>Approval Amount</th>
+                <th>Manager Status</th>
+                <th>Finalical Manager</th>
+                <th>Status</th>
+              </tr>
+            </table>
+          </div>
         </div>
-
+       
+          
        
       </div>
       <!-- Add panel of central    shubu-->
