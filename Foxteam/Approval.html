@@ -171,7 +171,12 @@
                 <ul class="sidebar-menu" data-widget="tree">
                     <li class="header">MAIN NAVIGATION</li>
                     <li class="active treeview menu-open">
-                        <a href="Home.html"><i class="fa fa-home"></i> <span>Home</span></a>
+                        <a href="Home.html">
+                            <i class="fa fa-dashboard"></i> <span>Home</span>
+                            <span class="pull-right-container">
+                                <!--- <i class="fa fa-angle-left pull-right"></i>-->
+                            </span>
+                        </a>
                         <!---- <ul class="treeview-menu">
             <li><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
             <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
@@ -336,6 +341,7 @@
             </section>
             <!-- /.sidebar -->
         </aside>
+
         &#65279;
         {
         ViewBag.Title = "Add Task";
@@ -347,22 +353,18 @@
         <div class="content-wrapper" style="min-height: 921px;">
             <section class="content-header">
                 <h1>
-                    Add New Task
+                    Approvals
                 </h1>
                 <span class="btn-success"></span>
                 <ol class="breadcrumb">
                     <li><a href="Home.html"><i class="fa fa-dashboard"></i> Home</a></li>
-                    <li class="active">Add Task</li>
+                    <li class="active">Approvals</li>
                 </ol>
             </section>
 
             <!-- Main content -->
             <section class="content">
-                <div>
-                    <div id="info">
-                        <p>Fill the following information carefully</p>
-                    </div>
-                </div>
+
 
                 <!-- Default box -->
                 <div class="box box-info">
@@ -385,12 +387,34 @@
                                     <div class="form-group">
                                         <label for="timesheetid" class="control-label">Tokan No</label>
 
+                                        <select class="form-control" data-val="true"
+                                            data-val-number="The field ProjectCode must be a number."
+                                            data-val-required="The ProjectCode field is required." id="ProjectCode"
+                                            name="ProjectCode" required="required">
+                                            <option value="">Select a Project Tokan No</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="18">10</option>
+
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="timesheetid" class="control-label">Amount</label>
+
                                         <div>
+
                                             <input class="form-control" data-val="true"
                                                 data-val-number="The field Duration must be a number."
                                                 data-val-required="The Duration field is required." id="duration"
-                                                min="0" name="Duration" placeholder="Tokan No" required="required"
-                                                type="number" value="">
+                                                min="0" name="Duration" placeholder="Approval Amount"
+                                                required="required" type="number" value="">
                                         </div>
                                     </div>
 
@@ -424,20 +448,20 @@
                                         </select>
 
                                     </div>
-                                    <div class="form-group">
-                                        <label for="timesheetid" class="control-label">Amount</label>
 
-                                        <div>
-                                            <input class="form-control" data-val="true"
-                                                data-val-number="The field StatusPercentage must be a number."
-                                                data-val-required="The StatusPercentage field is required."
-                                                id="StatusPercentage" min="0" name="StatusPercentage"
-                                                placeholder="Amount" required="required" type="number" value="">
-                                        </div>
-                                    </div>
                                 </div>
 
                                 <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="timesheetid" class="control-label">Employee Name</label>
+                                    
+                                        <div>
+                                            <input class="form-control" data-val="true"
+                                                id="EmpName"
+                                                min="0" name="EmpName" placeholder="Employee Name" required="required"
+                                                type="text" value="">
+                                        </div>
+                                    </div>
                                     <div class="form-group">
                                         <label for="projectdate" class="control-label">Date</label>
 
@@ -474,17 +498,8 @@
 
 
                                     </div>
-                                    <div class="form-group">
-                                        <label for="projectdate" class="control-label">Finalical Manager </label>
 
-                                        <div>
 
-                                            <input data-val="true"
-                                                data-val-required="The CheckInStatus field is required."
-                                                id="CheckInStatus" name="CheckInStatus" type="checkbox"
-                                                value="true"><input name="CheckInStatus" type="hidden" value="false">
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
@@ -529,16 +544,11 @@
             </section>
         </div>
 
-        <!-- Add panel of central    shubu-->
-
-        <!-- /.content-wrapper -->
-
         <footer class="main-footer">
             <div class="pull-right hidden-xs">
-                <b>20-02-2020 15:42:11</b>
+                <b>Version</b> 2.4.18
             </div>
-            <strong>©Copyright 2020 . All Rights Reserved. Designed by <a href="http://Foxteam.in"
-                    target="_blank">FoxTeam</a>.</strong>
+            <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
             reserved.
         </footer>
 
