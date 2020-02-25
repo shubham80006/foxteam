@@ -31,6 +31,19 @@
     <!-- Google Font -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 15px;
+        }
+    </style>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -369,212 +382,149 @@
                 <!-- Default box -->
                 <div class="box box-info">
                     <div class="box-header with-border">
-                        <h3 class="box-title">Add Task</h3>
 
-                        <div class="box-tools pull-right">
-                            <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
-                                title="" data-original-title="Collapse">
-                                <i class="fa fa-minus"></i>
-                            </button>
+
+
+
+                        <div class="nav-tabs-custom">
+
+
+
+                            <div class="tab-content no-padding">
+                                <!-- Morris chart - Sales -->
+                                <div class="chart tab-pane active" id="revenue-chart"
+                                    style="position: relative; height: 400px;">
+                                    <table id="tblEmp" class="table table-bordered table-hover">
+                                        <tr>
+                                            <th>Tokan No </th>
+                                            <th>Date</th>
+                                            <th>Project Name</th>
+                                            <th>Amount</th>
+                                            <th>Finalical Manager</th>
+                                            <th>Approval Amount</th>
+                                            <th>Approval</th>
+                                        </tr>
+                                        <tr>
+                                            <td>101</td>
+                                            <td>20/02/2020</td>
+                                            <td>foxteam</td>
+                                            <td>500</td>
+                                            <td>Not Required</td>
+                                            <td>
+                                                <div>
+                                                    <input class="form-control" data-val="true"
+                                                        data-val-number="The field StatusPercentage must be a number."
+                                                        data-val-required="The StatusPercentage field is required."
+                                                        id="ApprovalAmt" name="ApprovalAmt" placeholder="Amount"
+                                                        required="required" type="text" value="">
+                                                </div>
+                                            </td>
+                                            <td class="e-rowcell e-templatecell" role="gridcell" tabindex="-1"
+                                                aria-label="DeleteEdit is template cell column header Actions"
+                                                aria-colindex="6" index="0"><a
+                                                    class="btn btn-danger btn-flat pull-right" href="Project/Delete/1"
+                                                    onclick="return onConfirm()">Decline</a><a
+                                                    class="btn btn-success btn-flat pull-right"
+                                                    href="Project/Edit/1">Approval</a>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>101</td>
+                                            <td>20/02/2020</td>
+                                            <td>foxteam</td>
+                                            <td>500</td>
+                                            <td>Not Required</td>
+                                            <td>
+                                                <div>
+                                                    <input class="form-control" data-val="true"
+                                                        data-val-number="The field StatusPercentage must be a number."
+                                                        data-val-required="The StatusPercentage field is required."
+                                                        id="ApprovalAmt" name="ApprovalAmt" placeholder="Amount"
+                                                        required="required" type="text" value="">
+                                                </div>
+                                            </td>
+                                            <td class="e-rowcell e-templatecell" role="gridcell" tabindex="-1"
+                                                aria-label="DeleteEdit is template cell column header Actions"
+                                                aria-colindex="6" index="0"><a
+                                                    class="btn btn-danger btn-flat pull-right" href="Project/Delete/1"
+                                                    onclick="return onConfirm()">Decline</a><a
+                                                    class="btn btn-success btn-flat pull-right"
+                                                    href="Project/Edit/1">Approval</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>101</td>
+                                            <td>20/02/2020</td>
+                                            <td>foxteam</td>
+                                            <td>500</td>
+                                            <td>Not Required</td>
+                                            <td>
+                                                <div>
+                                                    <input class="form-control text-box single-line" data-val="true"
+                                                        data-val-number="The field StatusPercentage must be a number."
+                                                        data-val-required="The StatusPercentage field is required."
+                                                        id="ApprovalAmt" name="ApprovalAmt" placeholder="Amount"
+                                                        required="required" type="text" value="">
+                                                </div>
+                                            </td>
+                                            <td class="e-rowcell e-templatecell" role="gridcell" tabindex="-1"
+                                                aria-label="DeleteEdit is template cell column header Actions"
+                                                aria-colindex="6" index="0"><a
+                                                    class="btn btn-danger btn-flat pull-right" href="Project/Delete/1"
+                                                    onclick="return onConfirm()">Decline</a><a
+                                                    class="btn btn-success btn-flat pull-right"
+                                                    href="Project/Edit/1">Approval</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
-                    <div class="box-body">
-                        <form action="/Home/TimeSheet" method="post"><input name="__RequestVerificationToken"
-                                type="hidden"
-                                value="hmFHTtHVZzZpzkMQyKKJiDCdozQU1buymDveFypueMEmNNxJ7vLBoeJGOXd3mUuFK7CED7ndmxCFP5-SF9_m0cTyysz3YTBjMYhg-QkjhuU1">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="timesheetid" class="control-label">Tokan No</label>
-
-                                        <select class="form-control" data-val="true"
-                                            data-val-number="The field ProjectCode must be a number."
-                                            data-val-required="The ProjectCode field is required." id="ProjectCode"
-                                            name="ProjectCode" required="required">
-                                            <option value="">Select a Project Tokan No</option>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="18">10</option>
-
-                                        </select>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="timesheetid" class="control-label">Amount</label>
-
-                                        <div>
-
-                                            <input class="form-control" data-val="true"
-                                                data-val-number="The field Duration must be a number."
-                                                data-val-required="The Duration field is required." id="duration"
-                                                min="0" name="Duration" placeholder="Approval Amount"
-                                                required="required" type="number" value="">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Select Project</label>
-                                        <select class="form-control" data-val="true"
-                                            data-val-number="The field ProjectCode must be a number."
-                                            data-val-required="The ProjectCode field is required." id="ProjectCode"
-                                            name="ProjectCode" required="required">
-                                            <option value="">Select a Project</option>
-                                            <option value="1">Magrosa</option>
-                                            <option value="2">Squrelabs</option>
-                                            <option value="3">Leaves</option>
-                                            <option value="4">MIDS</option>
-                                            <option value="5">Research &amp; dev</option>
-                                            <option value="6">Products</option>
-                                            <option value="7">Learning</option>
-                                            <option value="8">Umbraco</option>
-                                            <option value="9">Central Assistant API</option>
-                                            <option value="18">Manotr</option>
-                                            <option value="19">SECURITY AGENCY WEBSITE</option>
-                                            <option value="20">ASHA THE HOPE WEBSITE</option>
-                                            <option value="21">JOB FOR ALL</option>
-                                            <option value="24">demo</option>
-                                            <option value="25">Client Side</option>
-                                            <option value="26">Admin work</option>
-                                            <option value="27">IsgESoutions</option>
-                                            <option value="41">Misclenious Project</option>
-                                            <option value="42">Warehouse Optimization</option>
-                                            <option value="43">FoxTeam.in</option>
-                                        </select>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="timesheetid" class="control-label">Employee Name</label>
-                                    
-                                        <div>
-                                            <input class="form-control" data-val="true"
-                                                id="EmpName"
-                                                min="0" name="EmpName" placeholder="Employee Name" required="required"
-                                                type="text" value="">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="projectdate" class="control-label">Date</label>
-
-                                        <div>
-                                            <span class="e-input-group e-control-wrapper e-date-wrapper e-valid-input"
-                                                style="width: 200px;"><input data-val="true"
-                                                    data-val-date="The field _date must be a date."
-                                                    data-val-required="The _date field is required." ejs-for="true"
-                                                    id="_date" name="_date" type="text" value="20-Feb-20"
-                                                    class="e-control e-datepicker e-lib e-input e-keyboard"
-                                                    aria-live="assertive" aria-atomic="true" aria-haspopup="true"
-                                                    aria-activedescendant="null" aria-owns="_date_options"
-                                                    aria-expanded="false" role="combobox" autocomplete="off"
-                                                    autocorrect="off" autocapitalize="off" spellcheck="false"
-                                                    aria-invalid="false" aria-disabled="false" tabindex="0"><span
-                                                    class="e-clear-icon e-clear-icon-hide" aria-label="close"
-                                                    role="button"></span><span
-                                                    class="e-input-group-icon e-date-icon e-icons"
-                                                    aria-label="select"></span></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="control-label">Select Sub-Project</label>
-
-
-
-                                        <select class="form-control" data-val="true"
-                                            data-val-number="The field SubProjectID must be a number."
-                                            data-val-required="The SubProjectID field is required." id="SubProjectID"
-                                            name="SubProjectID" required="required">
-                                            <option value="">Please select a sub-project</option>
-                                        </select>
-
-
-                                    </div>
-
-
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="timesheetid" class="control-label">Remark</label>
-
-                                        <div>
-                                            <textarea class="form-control" cols="20" id="StatusDescription"
-                                                name="StatusDescription"
-                                                placeholder="Please enter your Bill Details..!!" required="required"
-                                                rows="2"></textarea>
-
-                                        </div>
-                                    </div>
-
-
-
-                                </div>
-                            </div>
-                            <!-- /.box-body -->
-                            <div class="box-footer">
-                                <div class="row">
-                                    <div class="col-xs-4 col-md-2">
-                                        <button type="Submit" id="btnSave"
-                                            class="btn btn-block btn-success btn-flat">Save</button>
-                                    </div>
-                                    <div class="col-xs-4 col-md-2">
-                                        <button type="Submit" id="btnSaveAndAdd" formaction="Home/TimeSheetAndAdd"
-                                            formmethod="post" class="btn btn-block btn-success btn-flat">Save and
-                                            Add</button>
-                                    </div>
-                                    <div class="col-xs-4 col-md-2">
-                                        <a href="Expenses.html" class="btn btn-block btn-danger btn-flat">Cancel</a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /.box-footer-->
-                        </form>
-                    </div>
-                    <!-- /.box -->
                 </div>
-            </section>
+
+                <!-- /.box -->
         </div>
+        </section>
+    </div>
 
-        <footer class="main-footer">
-            <div class="pull-right hidden-xs">
-                <b>Version</b> 2.4.18
-            </div>
-            <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
-            reserved.
-        </footer>
+    <footer class="main-footer">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 2.4.18
+        </div>
+        <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
+        reserved.
+    </footer>
 
+    <script>
+        function onConfirm(code) {
+            return confirm('Are you sure you want to delete this project ?')
+        }
+    </script>
 
-
-        <!-- jQuery 3 -->
-        <script src="bower_components/jquery/dist/jquery.min.js"></script>
-        <!-- Bootstrap 3.3.7 -->
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- FastClick -->
-        <script src="bower_components/fastclick/lib/fastclick.js"></script>
-        <!-- AdminLTE App -->
-        <script src="dist/js/adminlte.min.js"></script>
-        <!-- Sparkline -->
-        <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-        <!-- jvectormap  -->
-        <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-        <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-        <!-- SlimScroll -->
-        <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-        <!-- ChartJS -->
-        <script src="bower_components/chart.js/Chart.js"></script>
-        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-        <script src="dist/js/pages/dashboard2.js"></script>
-        <!-- AdminLTE for demo purposes -->
-        <script src="dist/js/demo.js"></script>
+    <!-- jQuery 3 -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="bower_components/fastclick/lib/fastclick.js"></script>
+    <!-- AdminLTE App -->
+    <script src="dist/js/adminlte.min.js"></script>
+    <!-- Sparkline -->
+    <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+    <!-- jvectormap  -->
+    <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+    <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <!-- SlimScroll -->
+    <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- ChartJS -->
+    <script src="bower_components/chart.js/Chart.js"></script>
+    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+    <script src="dist/js/pages/dashboard2.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="dist/js/demo.js"></script>
 </body>
 
 </html>

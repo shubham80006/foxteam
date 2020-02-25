@@ -34,6 +34,15 @@
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
+    <style>
+    .slimScrollBar {
+      width: 10px;
+    }
+
+    tr:hover {
+      background-color: #ecf0f5;
+    }
+  </style>
     <div class="wrapper">
 
         <header class="main-header">
@@ -207,8 +216,8 @@
                         </a>
                         <ul class="treeview-menu">
                             <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> TimeSheet</a></li>
-                            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Expenses</a></li>
-                            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Approval</a></li>
+                            <li><a href="Expenses.html"><i class="fa fa-circle-o"></i> Expenses</a></li>
+                            <li><a href="Approval.html"><i class="fa fa-circle-o"></i> Approval</a></li>
 
                         </ul>
                     </li>
@@ -295,7 +304,7 @@
                             </li>
                             <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Branch List</a></li>
                             <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Employee List</a></li>
-                            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Settings</a></li>
+                            <li><a href="Settings.html"><i class="fa fa-circle-o"></i> Settings</a></li>
                             <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Organization Chart</a>
                             </li>
                             <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Directory</a></li>
@@ -342,8 +351,26 @@
             <!-- /.sidebar -->
         </aside>
         <script src="/plugins/jQuery/jquery-2.2.3.min.js"></script>
-        <link href="/Content/bootstrap-select.min.css" rel="stylesheet">
-        <div class="content-wrapper" style="min-height: 921px;">
+        <link href="/Content/bootstrap-select.min.css" rel="stylesheet" />
+
+        <script>
+
+            //Code  
+            $(function () {
+                $("#GPSSelector").val(15);
+                var s = 'True';
+                $("#NigativeLeaveSelector").val(s);
+                $("#MinLeaveSelector").val(2);
+                $("#IdleSelector").val(5);
+                $("#ScreenShotTimeSelector").val(5);
+                $('#GPPSType').val('GPS')
+            });
+
+        </script>
+
+
+
+        <div class="content-wrapper">
             <section class="content-header">
                 <h1>
                     Company Setting
@@ -365,8 +392,8 @@
                                 <div>
                                     <h5 style="float: left;margin-right: 10px;">Select Time Interval : </h5>
                                     <select class="selectpicker" id="GPSSelector" data-show-subtext="true"
-                                        data-live-search="true" style="display: none;">
-                                        <option selected="">Nothing Selected</option>
+                                        data-live-search="true">
+                                        <option selected>Nothing Selected</option>
 
                                         <option value="0">0</option>
                                         <option value="5">5</option>
@@ -376,50 +403,6 @@
                                         <option value="45">45</option>
                                         <option value="60">60</option>
                                     </select>
-                                    <div class="btn-group bootstrap-select"><button type="button"
-                                            class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown"
-                                            data-id="GPSSelector" title="Nothing selected"><span
-                                                class="filter-option pull-left">Nothing Selected</span>&nbsp;<span
-                                                class="caret"></span></button>
-                                        <div class="dropdown-menu open">
-                                            <div class="bs-searchbox"><input type="text"
-                                                    class="input-block-level form-control" autocomplete="off"></div>
-                                            <ul class="dropdown-menu inner selectpicker" role="menu">
-                                                <li data-original-index="0"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>Nothing Selected</span>"><span
-                                                            class="text">Nothing Selected</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="1"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>0</span>"><span
-                                                            class="text">0</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="2"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>5</span>"><span
-                                                            class="text">5</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="3"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>10</span>"><span
-                                                            class="text">10</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="4" class="selected"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>15</span>"><span
-                                                            class="text">15</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="5"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>30</span>"><span
-                                                            class="text">30</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="6"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>45</span>"><span
-                                                            class="text">45</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="7"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>60</span>"><span
-                                                            class="text">60</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
 
                                     <div class="box-body">
                                         <div class="test">
@@ -449,9 +432,9 @@
                                 <div>
                                     <h5 style="float: left;margin-right: 10px;">Select Time Interval : </h5>
                                     <select class="selectpicker" id="IdleSelector" data-show-subtext="true"
-                                        data-live-search="true" style="display: none;">
+                                        data-live-search="true">
 
-                                        <option selected="">Nothing Selected</option>
+                                        <option selected>Nothing Selected</option>
 
                                         <option value="0">0</option>
                                         <option value="5">5</option>
@@ -462,50 +445,6 @@
                                         <option value="60">60</option>
 
                                     </select>
-                                    <div class="btn-group bootstrap-select"><button type="button"
-                                            class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown"
-                                            data-id="IdleSelector" title="5"><span
-                                                class="filter-option pull-left">5</span>&nbsp;<span
-                                                class="caret"></span></button>
-                                        <div class="dropdown-menu open">
-                                            <div class="bs-searchbox"><input type="text"
-                                                    class="input-block-level form-control" autocomplete="off"></div>
-                                            <ul class="dropdown-menu inner selectpicker" role="menu">
-                                                <li data-original-index="0"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>Nothing Selected</span>"><span
-                                                            class="text">Nothing Selected</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="1"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>0</span>"><span
-                                                            class="text">0</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="2" class="selected"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>5</span>"><span
-                                                            class="text">5</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="3"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>10</span>"><span
-                                                            class="text">10</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="4"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>15</span>"><span
-                                                            class="text">15</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="5"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>30</span>"><span
-                                                            class="text">30</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="6"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>45</span>"><span
-                                                            class="text">45</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="7"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>60</span>"><span
-                                                            class="text">60</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                     <div class="box-body">
                                         <div class="test">
                                             <div id="Idle-reply">
@@ -536,9 +475,9 @@
                                 <div>
                                     <h5 style="float: left;margin-right: 10px;">Select Time Interval : </h5>
                                     <select class="selectpicker" id="ScreenShotTimeSelector" data-show-subtext="true"
-                                        data-live-search="true" style="display: none;">
+                                        data-live-search="true">
 
-                                        <option selected="">Nothing Selected</option>
+                                        <option selected>Nothing Selected</option>
 
                                         <option value="0">0</option>
                                         <option value="5">5</option>
@@ -549,50 +488,6 @@
                                         <option value="60">60</option>
 
                                     </select>
-                                    <div class="btn-group bootstrap-select"><button type="button"
-                                            class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown"
-                                            data-id="ScreenShotTimeSelector" title="5"><span
-                                                class="filter-option pull-left">5</span>&nbsp;<span
-                                                class="caret"></span></button>
-                                        <div class="dropdown-menu open">
-                                            <div class="bs-searchbox"><input type="text"
-                                                    class="input-block-level form-control" autocomplete="off"></div>
-                                            <ul class="dropdown-menu inner selectpicker" role="menu">
-                                                <li data-original-index="0"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>Nothing Selected</span>"><span
-                                                            class="text">Nothing Selected</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="1"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>0</span>"><span
-                                                            class="text">0</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="2" class="selected"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>5</span>"><span
-                                                            class="text">5</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="3"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>10</span>"><span
-                                                            class="text">10</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="4"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>15</span>"><span
-                                                            class="text">15</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="5"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>30</span>"><span
-                                                            class="text">30</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="6"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>45</span>"><span
-                                                            class="text">45</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="7"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>60</span>"><span
-                                                            class="text">60</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                     <div class="box-body">
                                         <div class="test">
                                             <div id="ScreenShots-reply">
@@ -620,37 +515,11 @@
                                 <div>
                                     <h5 style="float: left;margin-right: 10px;">Select Leave Tarckar : </h5>
                                     <select class="selectpicker" id="NigativeLeaveSelector" data-show-subtext="true"
-                                        data-live-search="true" style="display: none;">
-                                        <option selected="">Nothing Selected</option>
+                                        data-live-search="true">
+                                        <option selected>Nothing Selected</option>
                                         <option value="True">Yes</option>
                                         <option value="False">No</option>
-
-
                                     </select>
-                                    <div class="btn-group bootstrap-select"><button type="button"
-                                            class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown"
-                                            data-id="NigativeLeaveSelector" title="Yes"><span
-                                                class="filter-option pull-left">Yes</span>&nbsp;<span
-                                                class="caret"></span></button>
-                                        <div class="dropdown-menu open">
-                                            <div class="bs-searchbox"><input type="text"
-                                                    class="input-block-level form-control" autocomplete="off"></div>
-                                            <ul class="dropdown-menu inner selectpicker" role="menu">
-                                                <li data-original-index="0"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>Nothing Selected</span>"><span
-                                                            class="text">Nothing Selected</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="1" class="selected"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>Yes</span>"><span
-                                                            class="text">Yes</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="2"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>No</span>"><span
-                                                            class="text">No</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                     <div class="box-body">
                                         <div class="test">
                                             <div id="Nigatives-reply">
@@ -680,41 +549,13 @@
                                 <div>
                                     <h5 style="float: left;margin-right: 10px;">Select MinLeave : </h5>
                                     <select class="selectpicker" id="MinLeaveSelector" data-show-subtext="true"
-                                        data-live-search="true" style="display: none;">
-                                        <option selected="">Nothing Selected</option>
+                                        data-live-search="true">
+                                        <option selected>Nothing Selected</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
                                         <option value="3">3</option>
 
                                     </select>
-                                    <div class="btn-group bootstrap-select"><button type="button"
-                                            class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown"
-                                            data-id="MinLeaveSelector" title="2"><span
-                                                class="filter-option pull-left">2</span>&nbsp;<span
-                                                class="caret"></span></button>
-                                        <div class="dropdown-menu open">
-                                            <div class="bs-searchbox"><input type="text"
-                                                    class="input-block-level form-control" autocomplete="off"></div>
-                                            <ul class="dropdown-menu inner selectpicker" role="menu">
-                                                <li data-original-index="0"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>Nothing Selected</span>"><span
-                                                            class="text">Nothing Selected</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="1"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>1</span>"><span
-                                                            class="text">1</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="2" class="selected"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>2</span>"><span
-                                                            class="text">2</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="3"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>3</span>"><span
-                                                            class="text">3</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
 
                                     <div class="box-body">
                                         <div class="test">
@@ -744,35 +585,11 @@
                                 <div>
                                     <h5 style="float: left;margin-right: 10px;">Select MinLeave : </h5>
                                     <select class="selectpicker" id="GPPSType" data-show-subtext="true"
-                                        data-live-search="true" style="display: none;">
-                                        <option selected="" value="Nothing Selected">Nothing Selected</option>
+                                        data-live-search="true">
+                                        <option selected value="Nothing Selected">Nothing Selected</option>
                                         <option value="GPS">GPS - High Accuracy</option>
                                         <option value="AGPS">AGPS - Low Accuracy</option>
                                     </select>
-                                    <div class="btn-group bootstrap-select"><button type="button"
-                                            class="btn dropdown-toggle selectpicker btn-default" data-toggle="dropdown"
-                                            data-id="GPPSType" title="GPS - High Accuracy"><span
-                                                class="filter-option pull-left">GPS - High Accuracy</span>&nbsp;<span
-                                                class="caret"></span></button>
-                                        <div class="dropdown-menu open">
-                                            <div class="bs-searchbox"><input type="text"
-                                                    class="input-block-level form-control" autocomplete="off"></div>
-                                            <ul class="dropdown-menu inner selectpicker" role="menu">
-                                                <li data-original-index="0"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>Nothing Selected</span>"><span
-                                                            class="text">Nothing Selected</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="1" class="selected"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>GPS - High Accuracy</span>"><span
-                                                            class="text">GPS - High Accuracy</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                                <li data-original-index="2"><a tabindex="0" class=""
-                                                        data-normalized-text="<span class=&quot;text&quot;>AGPS - Low Accuracy</span>"><span
-                                                            class="text">AGPS - Low Accuracy</span><span
-                                                            class="glyphicon glyphicon-ok check-mark"></span></a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
 
                                     <div class="box-body">
                                         <div class="test">
@@ -800,96 +617,103 @@
                             <div class="box-body">
                                 <h4
                                     style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
-                                    Min Amount
+                                    Minimum Amount Approvals
                                 </h4>
                                 <div>
                                     <h5 style="float: left;margin-right: 10px;">Select MinAmount : </h5>
+                                    <select class="selectpicker" id="MinLeaveSelector" data-show-subtext="true"
+                                        data-live-search="true">
+                                        <option selected>Nothing Selected</option>
+                                        <option value="1">500</option>
+                                        <option value="2">1000</option>
+                                        <option value="3">1500</option>
 
-                                    <div>
-                                        <input class="form-control" data-val="true" id="EmpName" min="0" name="EmpName"
-                                            placeholder="Employee Name" required="required" type="text" value="">
+                                    </select>
+
+                                    <div class="box-body">
+                                        <div class="test">
+                                            <div id="Mins-reply"> </div>
+                                           
+                                        </div>
+
                                     </div>
-                                </div>
 
-                                <div class="box-body">
-                                    <div class="test">
-                                        <div id="Mins-reply">
+                                </div>
+                            </div>
+
+                            <div id="Min-Overlay">
+                                <i id="Min-Overlay-li"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <div class="box box-solid">
+                            <div class="box-body">
+                                <h4
+                                    style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
+                                    Minimum Amount Not Document Required
+                                </h4>
+                                <div>
+                                    <h5 style="float: left;margin-right: 10px;">Enter MinAmount :
+                                    </h5>
+                                    <div class="input-group mb-3">
+                                        <input type="text" class="form-control" placeholder="Enter Minimum Amount"
+                                            aria-label="DocumentAmount" aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary" type="button">submit</button>
                                         </div>
                                     </div>
+                                    <div class="box-body">
+                                        <div class="test">
+                                            <div id="GPSType-reply"> </div>
+                                        </div>
 
-                                </div>
-
-                            </div>
-
-
-                        </div>
-
-                       
-                    </div>
-               
-                     <div class="col-sm-12 col-md-6">
-                        <div class="box box-solid">
-                        <div class="box-body">
-                            <h4
-                                style="background-color:#f7f7f7; font-size: 18px; text-align: center; padding: 7px 10px; margin-top: 0;">
-                                Minimum Amount Document Not Reqiured
-                            </h4>
-                            <div>
-                                <h5 style="float: left;margin-right: 10px;"> Minimum Amount : </h5>
-                                <div>
-                                    <input type="text" class="form-control" placeholder="Enter Minimum Amount"
-                                        aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary" type="button">Button</button>
                                     </div>
-                                </div>
 
+                               </div>
                             </div>
-
-
-
+                            <div id="GPSType-Overlay">
+                                <i id="GPSType-Overlay-li"></i>
+                            </div>
                         </div>
+                    </div>
 
-
-                         </div>
-                      </div>
-                      </div>
                 </div>
-    </div>
-  </section>
-    </div>
-
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.4.18
+            </section>
         </div>
-        <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
-        reserved.
-    </footer>
+
+
+        <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+                <b>Version</b> 2.4.18
+            </div>
+            <strong>Copyright &copy; 2014-2019 <a href="https://adminlte.io">AdminLTE</a>.</strong> All rights
+            reserved.
+        </footer>
 
 
 
-    <!-- jQuery 3 -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap 3.3.7 -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="bower_components/fastclick/lib/fastclick.js"></script>
-    <!-- AdminLTE App -->
-    <script src="dist/js/adminlte.min.js"></script>
-    <!-- Sparkline -->
-    <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-    <!-- jvectormap  -->
-    <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-    <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-    <!-- SlimScroll -->
-    <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-    <!-- ChartJS -->
-    <script src="bower_components/chart.js/Chart.js"></script>
-    <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-    <script src="dist/js/pages/dashboard2.js"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
+        <!-- jQuery 3 -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- FastClick -->
+        <script src="bower_components/fastclick/lib/fastclick.js"></script>
+        <!-- AdminLTE App -->
+        <script src="dist/js/adminlte.min.js"></script>
+        <!-- Sparkline -->
+        <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+        <!-- jvectormap  -->
+        <script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+        <script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+        <!-- SlimScroll -->
+        <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- ChartJS -->
+        <script src="bower_components/chart.js/Chart.js"></script>
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <script src="dist/js/pages/dashboard2.js"></script>
+        <!-- AdminLTE for demo purposes -->
+        <script src="dist/js/demo.js"></script>
 </body>
 
 </html>
