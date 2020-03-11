@@ -9,6 +9,8 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
     <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+     <!-- bootstrap datepicker -->
+     <script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
     <!-- Ionicons -->
@@ -340,6 +342,48 @@
         {
         ViewBag.Title = "Add Task";
         }
+        <script>
+            $(function () {
+                checkReload();
+                $('#tokan').focus();
+        
+                 $('#ProjectCode').change(function () {
+        
+                    $('#SubProjectID').empty();
+                    $('#SubProjectID').append('<option value="">Select Sub-project</option>');
+        
+                    $.ajax({
+                        type: "POST",
+                        url: "../../data/subproject.json",
+                        datatype: "Jsonp",
+                        data: { ProjectId: $('#ProjectCode').val() },
+                        success: function (data) {
+        
+        
+                          $.each(data, function (index, value) {
+                              $('#SubProjectID').append('<option value="' + value.SubProjectID + '">' + value.SubProjectTitle + '</option>');
+                            });
+        
+                        }
+                    });
+        
+                });
+            });
+            function onDateFocus(args) {
+                var datepickerObject = args.model.element.ej2_instances[0];
+                datepickerObject.show();
+            }
+        
+            function checkReload() {
+                const string = '>';
+                console.log('changeReload', string)
+                if (string.trim() !== '') {
+        
+        
+                    $('#ProjectCode').val('').change();
+                }
+            }
+        </script>
         <!-- Content Wrapper. Contains page content -->
 
         <!-- Content Header (Page header) -->
@@ -388,7 +432,7 @@
                                         <div>
                                             <input class="form-control" data-val="true"
                                                 data-val-number="The field Duration must be a number."
-                                                data-val-required="The Duration field is required." id="duration"
+                                                data-val-required="The Duration field is required." id="Tokan"
                                                 min="0" name="Duration" placeholder="Tokan No" required="required"
                                                 type="number" value="">
                                         </div>
@@ -439,26 +483,16 @@
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="projectdate" class="control-label">Date</label>
-
-                                        <div>
-                                            <span class="e-input-group e-control-wrapper e-date-wrapper e-valid-input"
-                                                style="width: 200px;"><input data-val="true"
-                                                    data-val-date="The field _date must be a date."
-                                                    data-val-required="The _date field is required." ejs-for="true"
-                                                    id="_date" name="_date" type="text" value="20-Feb-20"
-                                                    class="e-control e-datepicker e-lib e-input e-keyboard"
-                                                    aria-live="assertive" aria-atomic="true" aria-haspopup="true"
-                                                    aria-activedescendant="null" aria-owns="_date_options"
-                                                    aria-expanded="false" role="combobox" autocomplete="off"
-                                                    autocorrect="off" autocapitalize="off" spellcheck="false"
-                                                    aria-invalid="false" aria-disabled="false" tabindex="0"><span
-                                                    class="e-clear-icon e-clear-icon-hide" aria-label="close"
-                                                    role="button"></span><span
-                                                    class="e-input-group-icon e-date-icon e-icons"
-                                                    aria-label="select"></span></span>
+                                        <label>Date:</label>
+                                
+                                        <div class="input-group date">
+                                          <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                          </div>
+                                          <input type="text" class="form-control pull-left" id="datepicker">
                                         </div>
-                                    </div>
+                                        <!-- /.input group -->
+                                      </div>
 
                                     <div class="form-group">
                                         <label class="control-label">Select Sub-Project</label>
@@ -557,6 +591,9 @@
         <!-- jvectormap  -->
         <script src="../../plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
         <script src="../../plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+        
+          <!-- bootstrap datepicker -->
+          <script src="../../bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
         <!-- SlimScroll -->
         <script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
         <!-- ChartJS -->
@@ -565,6 +602,10 @@
         <script src="../../dist/js/pages/dashboard2.js"></script>
         <!-- AdminLTE for demo purposes -->
         <script src="../../dist/js/demo.js"></script>
+      
+    
+      <script src="/Scripts/scripts/partial.min.js"></script>
+    
 </body>
 
 </html>

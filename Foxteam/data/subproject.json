@@ -1,0 +1,122 @@
+{
+    "Sub Product": [
+        {
+            "SubProjectID": "1",
+            "SubProjectTitle": "Magrosa",
+            "ProjectId":"1"
+
+        },
+        {
+            "SubProjectID": "2",
+            "SubProjectTitle": "Magrosadb",
+            "ProjectId":"1"
+
+        },
+
+        {
+            "SubProjectID": "3",
+            "SubProjectTitle": "office Manager",
+            "ProjectId":"7"
+
+        },
+
+        {
+            "SubProjectID": "4",
+            "SubProjectTitle": "maintains manager",
+            "ProjectId":"7"
+
+        },
+
+        {
+            "SubProjectID": "5",
+            "SubProjectTitle": "subdemo1",
+            "ProjectId":"7"
+
+        },
+
+        {
+            "SubProjectID": "6",
+            "SubProjectTitle": "Foxteam impl and support",
+            "ProjectId":"7"
+
+        },
+
+        {
+            "SubProjectID": "7",
+            "SubProjectTitle": "Squrelabs",
+            "ProjectId":"2"
+
+        },
+
+        {
+            "SubProjectID": "8",
+            "SubProjectTitle": "Manot",
+            "ProjectId":"3"
+
+        },
+
+        {
+            "SubProjectID": "9",
+            "SubProjectTitle": "Leaves",
+            "ProjectId":"4"
+
+        }
+        {
+            "SubProjectID": "10",
+            "SubProjectTitle": "Leaves",
+            "ProjectId":"4"
+
+        },
+        {
+            "SubProjectID": "11",
+            "SubProjectTitle": "MIDS",
+            "ProjectId":"5"
+
+        },
+        {
+            "SubProjectID": "12",
+            "SubProjectTitle": "Research &amp; dev",
+            "ProjectId":"6"
+
+        },
+        {
+            "SubProjectID": "13",
+            "SubProjectTitle": "product",
+            "ProjectId":"7"
+
+        },
+        {
+            "SubProjectID": "14",
+            "SubProjectTitle": "Learning",
+            "ProjectId":"8"
+
+        },
+        {
+            "SubProjectID": "15",
+            "SubProjectTitle": "Umbraco",
+            "ProjectId":"9"
+
+        },
+        {
+            "SubProjectID": "15",
+            "SubProjectTitle": "Central Assistant API",
+            "ProjectId":"10"
+
+        },
+        {
+            "SubProjectID": "16",
+            "SubProjectTitle": "SECURITY AGENCY WEBSITE",
+            "ProjectId":"7"
+
+        }
+
+
+
+
+
+
+
+
+]
+
+}
